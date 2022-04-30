@@ -2,7 +2,7 @@ import {useState} from 'react'
 import { Link } from 'react-router-dom'
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth'
 import { toast } from 'react-toastify'
-import {ReactComponent as ArrowRightIcon} from '.../assets/svg/keyboardArrowRightIcon.svg'
+import {ReactComponent as ArrowRightIcon} from '../assets/svg/keyboardArrowRightIcon.svg'
 
 
 function ForgotPassword() {
@@ -11,7 +11,7 @@ function ForgotPassword() {
 
   const onChange = e => setEmail(e.target.value)
 
-  const onSubmit = e => {
+  const onSubmit = async (e) => {
     e.preventDefault()
     try {
       const auth = getAuth()
